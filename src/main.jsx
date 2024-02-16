@@ -17,7 +17,7 @@ const routes = createBrowserRouter([{
 
 }, {
   path: "/admin",
-  element: <AdminPage />,
+  element: < AdminPage />,
 
   children: [{ path: "service1", element: <EditBusinessData /> },
   {path:"service", element:<Service />},],

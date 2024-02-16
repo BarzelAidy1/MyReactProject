@@ -1,7 +1,6 @@
 import { action, makeObservable, observable } from "mobx"
 import adama from '../assets/img/adama.png';
-import bricha from '../assets/img/bricha.jpg';
-import logo1 from '../assets/img/logo1.jpg';
+import merchav from '../assets/img/merchav.jpg';
 import shlita from '../assets/img/shlita.jpg';
 import vertigo from '../assets/img/vertigo.jpg';
 class serviceData {
@@ -23,35 +22,13 @@ class serviceData {
         age:"יסודי- שכבה בינונית",
         image: adama,
     },
+    
     {
         id: '2',
-        price: "1800",
-        name: "הכל בשליטה",
-        describtion: "תוכנית מסך, קהל ובמה חוייתית ויחודית בנושא אמונה ",
-        age:"שכבת יסודי הגבוהה",
-        image: shlita,
-    },
-    {
-        id: '3',
-        price: "900",
-        name: "הנחיה",
-        describtion: " הנחיית במה סוחפת ואטרקטיבית! הנאה מובטחת--- מומחיות מיוחדת בהפעלת תוכנית קליקרים",
-        image: '',
-    },
-    {
-        id: '4',
-        price: "1800",
-        name: "תוכנית שירה/ הרקדה",
-        describtion: "הקרדה סוחפת ושירי נשמה משולבים בהרמוניה יחודית וכובשת. אפשרות להוספת כלים",
-        image: '',
-
-    },
-    {
-        id: '5',
         price: "4200",
         name: "חדר בריחה",
         describtion: "חדרי בריחה שנונים ויצירתיים במרחב הקולי, בדיגיטל ובפרונטלי- חויה עוצמתית וסוחפת בנושאים שונים",
-        image: bricha,
+        image: merchav,
     }
     ]);    
     constructor() {

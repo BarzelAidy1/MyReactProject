@@ -32,7 +32,7 @@ const EditBusinessData = observer(() => {
     <br />
     <button type="submit">עריכה</button>
   </form>
-
+  
 })
 
 export default EditBusinessData

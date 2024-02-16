@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { setLogin } from "../../data/loginServer"
 import { Box, Button, Stack, TextField } from "@mui/material"
-
+import './login.css'
 const LoginPage = () => {
 
   const handleLogin = (e) => {

@@ -2,7 +2,7 @@ import { observer } from "mobx-react"
 import { useTheme } from '@mui/material/styles';
 import serviceData from "../../data/serviceData";
 import './Service.css'
-import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Typography} from "@mui/material";
+import {Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Typography} from "@mui/material";
 
 const Service = (observer(() => {
   
@@ -10,13 +10,14 @@ const Service = (observer(() => {
   
   return (
       <>
+        <div id="kk">
           {serviceData.serviceList.map((details, id) => {
               return (
-                <Card id="card" sx={{ maxWidth: 150 }}>
+              <Card key={id} id="card" sx={{ maxWidth: 340 }}>
                   <CardActionArea>
                     <CardMedia id="image"
                       component="img"
-                      height="140"
+                      height="300"
                       image ={details.image}
                       alt="עוצמה של הפקה"
                     />
@@ -31,16 +32,21 @@ const Service = (observer(() => {
                   </CardActionArea>
                   <CardActions>
                     <Button size="small" color="primary">
+                      למידע נוסף                    
+                    </Button>
+                    <Button size="small" color="primary">
                       להזמנה
                     </Button>
                   </CardActions>
                 </Card>
 
+                
+                
               )
           }
           
           )}
-       
+       </div>
       </>
   )
 }))

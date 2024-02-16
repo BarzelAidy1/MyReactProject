@@ -3,9 +3,8 @@ import { getService } from "./data/serviceServer"
 import { Outlet } from "react-router-dom"
 import Meeting from "./components/Meeting/Meeting"
 import MeetingList from "./components/Meeting/MeetingList"
-import AddMeeting from "./components/meeting/AddMeeting"
 import BusinessData from "./components/businessData/BusinessData"
-
+import './App.css'
 
 function App() {
   const [meetings, setMeetings]=useState([]);

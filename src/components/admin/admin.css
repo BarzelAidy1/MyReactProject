@@ -1,6 +1,6 @@
 #buttonLogin {
     color: rgb(74, 74, 216);
-    /* position: absolute; */
+    position: absolute; 
     left: 50%;
     transform: translate(-50%);
 }
@@ -14,10 +14,11 @@
     display: flex;
     justify-content: center;
     position: absolute;
+    background-color: white;
 }
 
 #password {
-    /* position: relative; */
+
     position: relative;
     justify-content: center;
 }

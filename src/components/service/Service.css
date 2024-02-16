@@ -1,13 +1,16 @@
 #card {
-    width: 100vw;
-    height: 50vh;
-    border: solid gray 2px;
-    margin: 2%;
+    
+    border: solid black;
+    margin: 3%;
+    height:58vh;
 }
-
+#kk{
+    display: flex;
+    flex-wrap: wrap;
+}
 #image {
     width: 100%;
-    height: 100%;
+    height:100% ;
 }
 
 #details {
@@ -17,7 +20,7 @@
 
 #orderDetails {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction:row-reverse;
     justify-content: space-evenly;
     margin-bottom: 10%;
    
