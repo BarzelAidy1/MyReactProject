@@ -20,7 +20,7 @@ class BuisnesDataStore {
 
 
     setData(data) {
-        this.setData = data
+        this.data = data
     }
 }
 

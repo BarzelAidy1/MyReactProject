@@ -30,7 +30,7 @@ const BusinessData = observer(() => {
         </div>
         
       </div>
-        <Service/>
+    
         
       
     </>

@@ -1,9 +1,11 @@
 import axios from "axios";
+import serviceData from "./serviceData";
 
 export const getService = async () => {
     try {
         const data = await axios.get('http://localhost:8787/services');
         console.log(data.data)
+        serviceData.setServices(data.data)
         //set all service global
     }
     catch (e) {

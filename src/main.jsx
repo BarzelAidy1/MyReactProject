@@ -5,9 +5,8 @@ import './index.css';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import AdminPage from './components/admin/AdminPage.jsx';
 import EditBusinessData from './components/businessData/EditBusinessData.jsx';
-import BusinessData from './components/businessData/BusinessData.jsx';
-import Meeting from './components/Meeting/Meeting.jsx';
-import Service from './components/Service/Service.jsx';
+import MeetingList from './components/Meeting/MeetingList.jsx';
+import Service from './components/service/Service.jsx';
 
 const routes = createBrowserRouter([{
 
@@ -15,14 +14,19 @@ const routes = createBrowserRouter([{
   element: <App />,
   //errorElement:<ErorNotFound />
 
+
 }, {
   path: "/admin",
-  element: < AdminPage />,
+  element: <AdminPage />,
 
-  children: [{ path: "service1", element: <EditBusinessData /> },
-  {path:"service", element:<Service />},],
+  children: [
+    { path: "service", element: <Service /> },
+    { path: "meeting", element: <MeetingList /> },
+    { path: "edit", element: <EditBusinessData /> },
+  ],
+},
   //errorElement:<ErorNotFound />
-}])
+])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

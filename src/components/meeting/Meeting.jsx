@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import AddMeeting from './AddMeeting';
 import { Button } from '@mui/material';
-
+import './Meeting.css'
 
 const Meeting = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -23,7 +23,7 @@ const Meeting = () => {
 
   return (
     <div>
-      <Button variant="contained" onClick={openModal} >הזמנת תוכנית</Button>     
+      <Button variant="contained" onClick={openModal} id="color">הזמנת תוכנית</Button>     
   
       {isModalOpen && (
         <div className="modal">

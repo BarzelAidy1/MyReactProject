@@ -5,6 +5,7 @@ import Meeting from "./components/Meeting/Meeting"
 import MeetingList from "./components/Meeting/MeetingList"
 import BusinessData from "./components/businessData/BusinessData"
 import './App.css'
+import Service from "./components/service/Service"
 
 function App() {
   const [meetings, setMeetings]=useState([]);
@@ -19,6 +20,8 @@ function App() {
   return (
     <>   
     <BusinessData/> 
+    <br/>
+      <Service/>
       <br/>
       <Meeting/>
 
