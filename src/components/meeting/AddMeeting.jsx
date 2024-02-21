@@ -51,10 +51,10 @@ const AddMeeting = ({ onReservation }) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <TextField id="outlined-basic" label="Name" variant="outlined" type="text" value={name} onChange={handleNameChange} />
-      <TextField id="outlined-basic" label=" Email:" variant="outlined" type='email' value={email} onChange={handleEmailChange} />
-      <TextField id="outlined-basic" label="Phone" variant="outlined" type="tel" value={phone} onChange={handlePhoneChange} />
-      <TextField id="date" label="Date and Time" variant="outlined" type="datetime-local" value={dateTime} onChange={handleDateTimeChange} />
+      <TextField id="outlined-basic" name='name' label="Name" variant="outlined" type="text" value={name} onChange={handleNameChange} />
+      <TextField id="outlined-basic" name='email' label=" Email:" variant="outlined" type='email' value={email} onChange={handleEmailChange} />
+      <TextField id="outlined-basic" name='phone' label="Phone" variant="outlined" type="tel" value={phone} onChange={handlePhoneChange} />
+      <TextField id="date" name='dateTime' label="Date and Time" variant="outlined" type="datetime-local" value={dateTime} onChange={handleDateTimeChange} />
       <br/>
       <br/>
       <button type="submit" id="btn">אישור הזמנה</button>

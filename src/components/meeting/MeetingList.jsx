@@ -1,8 +1,8 @@
 import { observer } from "mobx-react";
 import React, { useEffect } from "react";
-
 import { GetList } from "../../data/meetingDataServer";
 import meetingStore from "../../data/meetingStore";
+import './Meeting.css';
 
 const MeetingList = observer(() => {
 
@@ -13,35 +13,46 @@ const MeetingList = observer(() => {
     }
   }, [])
 
-  const mettingColor = (dataTime) => {
-    // const date = new Date();
-    // date.setTime(0, 0, 0, 0);
-    // dataTime= Date.parse(dataTime)
-    // dataTime.setTime(0, 0, 0, 0)
-    // console.log(dataTime,date)
-    // if (dataTime === date) {
-    //   return 'red';
-    // }
-    // else if ( Date(dataTime) < date.setDate(date.getDate() + 7))
-    //   return 'green';
+  const meetingColor = (dateTime) => {
+  
+    const currentDate = new Date();
+        const meetingDate = new Date(dateTime);
+      console.log(meetingDate)
 
-    return 'orange';
+
+        const lastDayOfWeek = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate() - currentDate.getDay() + 7);
+        if (meetingDate > currentDate && meetingDate <= lastDayOfWeek)
+            return <div id="orange">{dateTime}</div>;
+
+
+        if (meetingDate.getDate() === currentDate.getDate() &&
+            meetingDate.getMonth() === currentDate.getMonth() &&
+            meetingDate.getFullYear() === currentDate.getFullYear())
+            return <div id="red">{dateTime}</div>;
+        else return <div id="green">{dateTime}</div>;
+    
+    
 
   }
+  
+  
 
   return (
     <>
       <div>
+      
         <h2>רשימת ההזמנות שבוצעו</h2>
         <ul>
           {meetingStore.meetings.map((meeting, index) => (
             <li key={index}>
-              {console.log(mettingColor(meeting.dateTime), meeting.dateTime)}
-              <strong>{meeting.name}</strong>-{meeting.email}-{meeting.phone}
+              
+              <strong>{meeting.name}</strong> - {meeting.email} - {meeting.phone} - {meetingColor(meeting.dateTime)}-
 
+              
             </li>
           ))}
         </ul>
+      
       </div>
     </>
   );

@@ -4,18 +4,22 @@ import { useTheme } from '@mui/material/styles';
 import serviceData from "../../data/serviceData";
 import './Service.css'
 import {Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Divider, ListItem, Stack, Typography} from "@mui/material";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { getService } from "../../data/serviceServer";
+import AddService from "./AddService";
+import AddMeeting from "../meeting/AddMeeting";
+import loginStore from "../../data/loginStore";
 
 
 
 const Service = (observer(() => {
   
-useEffect(()=>{
-  if(!serviceData.serviceList.length){
+  const [selectService, setSelectService] = useState(null)
+
+  useEffect(() => {
+
     getService()
-  }
-},[])  
+  }, [])
   
   return (
       <>
@@ -43,7 +47,8 @@ useEffect(()=>{
             
                   <CardActions>
                    <CardContent id="orderDetails">
-                     
+                     <h1 id="size">{details.name}</h1>
+                     <br/>
                       <Typography variant="body2" color="text.secondary">
                         {details.describtion}
                       </Typography>
@@ -60,6 +65,7 @@ useEffect(()=>{
           
           )}
        </div>
+      
       </>
   )
 }))

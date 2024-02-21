@@ -1,4 +1,4 @@
-import { TextField } from "@mui/material"
+import { Button, Stack, TextField } from "@mui/material"
 import { useState } from "react"
 import { AddServiceServer } from "../../data/serviceServer"
 
@@ -15,12 +15,14 @@ function AddService() {
   return (
     <>
       <form onSubmit={handleSubmit}>
+        <Stack>
         <TextField id="outlined-basic" name="name" label="שם התוכנית" variant="outlined" type="text" value={data.name} onChange={handleChange} />
-        <TextField id="outlined-basic" name="email" label=" תאור:" variant="outlined" type='text' value={data.email} onChange={handleChange} />
-        <TextField id="outlined-basic" name="phone" label="מחיר" variant="outlined" type="number" value={data.phone} onChange={handleChange} />
+        <TextField id="outlined-basic" name="describtion" label=" תאור:" variant="outlined" type='text' value={data.describtion} onChange={handleChange} />
+        <TextField id="outlined-basic" name="price" label="מחיר" variant="outlined" type="number" value={data.price} onChange={handleChange} />
+        <TextField id="outlined-basic" name="image" label="תמונה" variant="outlined" type="text" value={data.image} onChange={handleChange} />
 
-
-        <button type="submit">הוספת התוכנית לרשימה</button>
+        <Button type="submit">הוספת התוכנית לרשימה</Button>
+        </Stack>
       </form>
     </>
   )

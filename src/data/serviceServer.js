@@ -7,17 +7,19 @@ export const getService = async () => {
         console.log(data.data)
         serviceData.setServices(data.data)
         //set all service global
+        serviceData.setServices(data.data)
     }
     catch (e) {
         console.log(e)
     }
 }
 
-export const AddService = async (addData) => {
+export const AddServiceServer = async (addData) => {
     try {
-        const data = await axios.post('http://localhost:8787/service',addData);
+        const data = await axios.post('http://localhost:8787/service', addData);
         console.log(data.data)
         //add to store globale
+        serviceData.addService(data.data)
     }
     catch (e) {
         console.log(e)

@@ -7,6 +7,8 @@ import AdminPage from './components/admin/AdminPage.jsx';
 import EditBusinessData from './components/businessData/EditBusinessData.jsx';
 import MeetingList from './components/Meeting/MeetingList.jsx';
 import Service from './components/service/Service.jsx';
+import AddService from './components/service/AddService.jsx';
+
 
 const routes = createBrowserRouter([{
 
@@ -23,6 +25,8 @@ const routes = createBrowserRouter([{
     { path: "service", element: <Service /> },
     { path: "meeting", element: <MeetingList /> },
     { path: "edit", element: <EditBusinessData /> },
+    { path: "addservice", element: <AddService /> },
+  
   ],
 },
   //errorElement:<ErorNotFound />

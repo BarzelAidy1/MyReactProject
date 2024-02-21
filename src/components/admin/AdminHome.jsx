@@ -9,18 +9,14 @@ import BusinessData from "../businessData/BusinessData";
 
 const AdminHome = () => {
     return <> 
-    <ButtonGroup color="secondary" variant="contained" size="large" aria-label="Large button group">
-  <Link to="service" ><Button>to service</Button></Link>
-  <Link to="meeting" ><Button>to meeting</Button></Link>  
-</ButtonGroup>
-
-<Box sx={{ '& > :not(style)': { m: 1 } }}>
-      <Fab color="primary" aria-label="add">
-        <AddIcon />
-      </Fab>
-      <Link to="edit" > <Fab color="secondary" aria-label="edit"><EditIcon /></Fab></Link>
+     <ButtonGroup color="secondary" variant="contained" size="large" aria-label="Large button group">
+    <Link to="edit" ><Button sx={{ position: "absolute", bottom: 50 ,left:-400,width:"150px"}}>edit Details</Button></Link>
+      <Link to="service" ><Button sx={{ position: "absolute", bottom: 0 ,left:-400,width:"150px"}}>to service</Button></Link>
+      <Link to="meeting" ><Button sx={{ position: "absolute", bottom: -50,left:-400 ,width:"150px"}}>to meeting</Button></Link> 
+      <Link to="addservice" ><Button sx={{ position: "absolute", bottom: 100,left:-400 ,width:"150px"}}>add service</Button></Link>  
+    </ButtonGroup>      
       
-    </Box>        
+      
         
     
         <Outlet />

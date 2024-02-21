@@ -21,6 +21,7 @@ class MeetingStore {
     addMeeting(data) {
         this.meetings = [...this.meetings, data]
     }
+    
 
 }
 export default new MeetingStore()
