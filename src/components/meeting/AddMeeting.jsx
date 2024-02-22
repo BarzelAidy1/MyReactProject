@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { TextField } from '@mui/material';
-import { common } from '@mui/material/colors';
 import { addMeeting } from '../../data/meetingDataServer';
 import './AddMeeting.css';
 
@@ -39,15 +38,7 @@ const AddMeeting = ({ onReservation }) => {
       setPhone('');
       setDateTime('');
     })
-  };
-
-  /*
-      const addedSuccessfully=await addMeeting (meetingData);
-      if(addedSuccessfully){
-        onReservation(meetingData);
-      }
-    };*/
-
+  };  
 
   return (
     <form onSubmit={handleSubmit}>
@@ -61,6 +52,5 @@ const AddMeeting = ({ onReservation }) => {
     </form>
   );
 };
-
 
 export default AddMeeting;

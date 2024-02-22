@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { updateBuisneData } from "../../data/BuisnesDataServer";
 import BuisnesDataStore from "../../data/BuisnesDataStore";
 import { observer } from "mobx-react";
-import { Stack, TextField } from "@mui/material";
+import {  TextField } from "@mui/material";
 import './EditBuisnessData.css'
 const EditBusinessData = observer(() => {
   const [Form, setForm] = useState({});

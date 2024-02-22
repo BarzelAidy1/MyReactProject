@@ -5,9 +5,9 @@ class BuisnesDataStore {
     data={
         logo:logo,
         name:"תוכניות מסך ובמה",
-        adminName:"חיה ויזל",
+        adminName:"איידי ברזל ",
         adress:"בני ברק",
-        phone:"0504163893",
+        phone:"054-8441358",
         information:""
     }
     

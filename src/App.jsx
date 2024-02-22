@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react"
 import { getService } from "./data/serviceServer"
-import { Outlet } from "react-router-dom"
 import Meeting from "./components/Meeting/Meeting"
-import MeetingList from "./components/Meeting/MeetingList"
 import BusinessData from "./components/businessData/BusinessData"
 import './App.css'
 import Service from "./components/service/Service"
